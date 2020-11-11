@@ -1,0 +1,13 @@
+<h2><%= @flat.name %></h2>
+<p><%= @flat.address %></p>
+<p><%= @flat.description %></p>
+
+<%= link_to "Update", edit_flat_path(@flat)  %>
+<%= link_to "Delete #{@flat.name}",
+            flat_path(@flat),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+
+
+
+<p> If you want to get back to the flats list press <%= link_to "HERE", flats_path  %>
